@@ -1,0 +1,131 @@
+<ppt>
+  <!-- Page 1: Title Slide -->
+  <ppt-page class="slide-title-page">
+    <div class="content-center">
+      <ppt-text class="main-title">World Peace</ppt-text>
+      <ppt-text class="subtitle">A Shared Dream for Humanity</ppt-text>
+      <ppt-image class="globe-decoration">
+        <div class="globe-circle"></div>
+        <div class="orbit"></div>
+      </ppt-image>
+    </div>
+  </ppt-page>
+
+  <!-- Page 2: Quote -->
+  <ppt-page class="slide-quote">
+    <div class="quote-container">
+      <ppt-text class="quote-text">"Peace cannot be kept by force; it can only be achieved by understanding."</ppt-text>
+      <ppt-text class="quote-author">— Albert Einstein</ppt-text>
+    </div>
+  </ppt-page>
+
+  <!-- Page 3: Pillars -->
+  <ppt-page class="slide-pillars">
+    <ppt-text class="slide-header">The Pillars of Peace</ppt-text>
+    <div class="cards-container">
+      <ppt-image class="card">
+        <div class="card-icon">🤝</div>
+        <h3>Cooperation</h3>
+        <p>Working together across borders.</p>
+      </ppt-image>
+      <ppt-image class="card">
+        <div class="card-icon">❤️</div>
+        <h3>Compassion</h3>
+        <p>Empathy for every living being.</p>
+      </ppt-image>
+      <ppt-image class="card">
+        <div class="card-icon">⚖️</div>
+        <h3>Justice</h3>
+        <p>Fairness and equality for all.</p>
+      </ppt-image>
+    </div>
+  </ppt-page>
+
+  <!-- Page 4: Call to Action -->
+  <ppt-page class="slide-cta">
+    <div class="content-center">
+      <ppt-text class="cta-text">Join the Movement</ppt-text>
+      <ppt-shape class="separator"></ppt-shape>
+      <ppt-text class="cta-sub">Make peace a reality today.</ppt-text>
+    </div>
+  </ppt-page>
+</ppt>
+
+<style>
+  /* Global Reset & Base */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #f0f4f8; }
+
+  /* Slide Container (1280x720) */
+  .slide {
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    position: relative;
+    background: white;
+    color: #333;
+  }
+
+  /* Page 1: Title */
+  .slide-title-page {
+    background: linear-gradient(135deg, #e0f7fa 0%, #e1bee7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content-center { text-align: center; z-index: 10; }
+  .main-title { font-size: 96px; font-weight: 800; color: #2c3e50; letter-spacing: -2px; margin-bottom: 20px; }
+  .subtitle { font-size: 36px; color: #546e7a; font-weight: 300; }
+  
+  .globe-decoration { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 0; opacity: 0.5; }
+  .globe-circle { width: 400px; height: 400px; background: rgba(255,255,255,0.4); border-radius: 50%; border: 2px solid rgba(255,255,255,0.8); }
+  .orbit { width: 500px; height: 500px; border: 1px dashed #b0bec5; border-radius: 50%; position: absolute; top: -50px; left: -50px; animation: spin 20s linear infinite; }
+
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+  /* Page 2: Quote */
+  .slide-quote {
+    background: #263238;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .quote-container { max-width: 900px; text-align: center; }
+  .quote-text { font-size: 56px; font-family: Georgia, serif; font-style: italic; line-height: 1.4; }
+  .quote-author { font-size: 32px; margin-top: 40px; color: #cfd8dc; text-align: right; }
+
+  /* Page 3: Pillars */
+  .slide-pillars {
+    background: #fff;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide-header { font-size: 48px; color: #1a237e; border-bottom: 4px solid #c5cae9; padding-bottom: 20px; margin-bottom: 60px; }
+  .cards-container { display: flex; justify-content: space-between; gap: 40px; }
+  .card {
+    flex: 1;
+    background: #f5f5f5;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+  }
+  .card-icon { font-size: 64px; margin-bottom: 20px; }
+  .card h3 { font-size: 32px; color: #333; margin-bottom: 15px; }
+  .card p { font-size: 20px; color: #666; line-height: 1.5; }
+
+  /* Page 4: CTA */
+  .slide-cta {
+    background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cta-text { font-size: 80px; font-weight: bold; color: white; text-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  .separator { width: 100px; height: 6px; background: white; margin: 30px auto; border-radius: 3px; }
+  .cta-sub { font-size: 32px; color: rgba(255,255,255,0.9); }
+
+</style>
