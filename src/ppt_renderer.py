@@ -5,7 +5,7 @@ from pptx.enum.shapes import MSO_SHAPE, MSO_CONNECTOR
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR
 from pptx.dml.color import RGBColor
 from utils import px_to_emu, parse_color, parse_rgb_string
-from config import PPT_WIDTH_PX, PPT_HEIGHT_PX
+from config import PPT_WIDTH_PX, PPT_HEIGHT_PX, TEXT_WIDTH_FACTOR
 
 class PPTRenderer:
     def __init__(self, output_path):
@@ -26,12 +26,12 @@ class PPTRenderer:
         orig_x = x
         orig_w = w
 
-        # Adjust width to prevent wrapping issues (1.2x)
+        # Adjust width to prevent wrapping issues
         # And adjust x based on alignment to keep text visually stationary
         w_new = int(w)
         
         if el_data.get('isSingleLine', False):
-            w_new = int(w * 1.4)
+            w_new = int(w * TEXT_WIDTH_FACTOR)
             
             align = el_data['styles'].get('textAlign', 'left')
             if align == 'center':

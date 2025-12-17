@@ -52,6 +52,8 @@ To simplify writing, the `.wp` format introduces a set of semantic tags. The com
 
 > **Note**: For elements with complex styles (such as gradients, shadows, filters) or **semi-transparent effects**, it is recommended to use the `<ppt-image>` tag. The compiler will take a screenshot of the entire area and insert it as an image into the PPT to ensure the visual effect is consistent with the web page.
 
+> **Important**: The `<ppt-text>` tag currently only supports basic properties (color, font family, bold). If you need to render a **text card** (e.g., text with a background color, border, or shadow), do not apply these styles directly to `<ppt-text>`. Instead, use a separate `<ppt-shape>` for the background or wrap the entire card in `<ppt-image>` to export it as an image.
+
 ### 3.1 Attribute Passthrough
 All standard HTML attributes defined on custom tags (such as `class`, `style`, `id`) are passed through to the compiled tags as is.
 

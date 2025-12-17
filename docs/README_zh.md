@@ -95,4 +95,4 @@ python src/main.py input/test.wp -o output/test.pptx
 
 ## 许可证
 
-[MIT License](LICENSE)
+[MIT License](../LICENSE)
